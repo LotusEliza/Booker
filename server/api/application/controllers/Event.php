@@ -263,8 +263,6 @@ class Event extends Controller
                 unset($array['recurrent']);
                 if(!$this->emptyVal($array)){
                     $result = $this->model->getOneEvent($array['id']);
-//                    echo $result[0]['time_start'];
-
                     if($result){
                         if(!$this->passedDate($result[0]['time_start'])){
                             if($this->recurrent){

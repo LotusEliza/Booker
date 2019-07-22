@@ -8,7 +8,6 @@
 
 namespace application\core;
 
-
 class Router
 {
 
@@ -32,17 +31,8 @@ class Router
 
     public function match() {
         $url = trim($_SERVER['REQUEST_URI'], '/');
-         
-//       //Cutting of dirs from url (class)
-//      $prefix = '~user3/booker/server/api/';
-//      $url = substr($url, strlen($prefix));
-
-      
-          // //Cutting of dirs from url (home)
-          $prefix = 'my_booker/server/api/';
-          $url = substr($url, strlen($prefix));
-
-        // var_dump($_SERVER['REQUEST_URI']);
+        $prefix = '~user3/booker/server/api/';
+        $url = substr($url, strlen($prefix));
 
         foreach ($this->routes as $route => $params) {
             if (preg_match($route, $url, $matches)) {
@@ -54,7 +44,6 @@ class Router
                         $this->var = $matches[1];
                     }
                 }
-
                 if(isset($matches[2]) && !is_numeric($matches[2])) {
                     $this->format = $matches[2];
                 }

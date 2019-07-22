@@ -12,7 +12,7 @@ Vue.use(Router)
 
 let router =  new Router({
   mode: 'history',
-  // base: '/rest/client/',
+  base: '/~user3/booker/client/',
   routes: [
       {
           path: '/',

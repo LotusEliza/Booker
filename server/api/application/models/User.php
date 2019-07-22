@@ -7,9 +7,8 @@
  */
 
 namespace application\models;
-
-
 use application\core\Model;
+
 
 class User extends Model
 {
@@ -55,18 +54,6 @@ class User extends Model
             return false;
         }
     }
-//DELETE FROM events WHERE id_user = 1  AND time_start >= NOW();
-
-//    public function deleteEventsUser($array){
-//        $result = $this->db->query("DELETE u,e FROM users u LEFT JOIN events e
-//                                    ON e.id_user=u.id WHERE u.id = :id;", $array);
-//        $count = $result->rowCount();
-//        if($count){
-//            return true;
-//        }else{
-//            return false;
-//        }
-//    }
 
     public function createUser($user){
         $result = $this->db->query("INSERT INTO users 

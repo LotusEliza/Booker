@@ -62,26 +62,6 @@ class Controller
         }
     }
 
-//    public function format($format, $response){
-//        switch ($format) {
-//            case "json":
-//                echo json_encode($response);
-//                break;
-//            case "txt":
-//                $result = $this->toText($response);
-//                print_r($result);
-//                break;
-//            case "xml":
-//                echo $this->toXml($response);
-//                break;
-//            case "html":
-//                echo $this->toHtml($response);
-//                break;
-//            default:
-//                break;
-//        }
-//    }
-
     public function jwtValid()
     {
         $data = json_decode(file_get_contents("php://input"));
@@ -104,8 +84,6 @@ class Controller
         $data = htmlspecialchars($data);
         return $data;
     }
-
-
 
     public function emptyVal($array){
         return $contains_empty = in_array("", $array, true);

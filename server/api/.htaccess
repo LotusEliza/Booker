@@ -6,8 +6,8 @@ AddDefaultCharset utf-8
 </Limit>
 
 RewriteEngine on
-#RewriteBase /~user3/booker/server/api/
-RewriteBase /my_booker/server/api/
+RewriteBase /~user3/booker/server/api/
+#RewriteBase /my_booker/server/api/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php

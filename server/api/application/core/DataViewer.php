@@ -8,10 +8,7 @@ use SimpleXMLElement;
 
 class DataViewer
 {
-    public function __construct()
-    {
-
-    }
+    public function __construct(){}
 
     public function sendResponse($format, $response){
         switch ($format) {

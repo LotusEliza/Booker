@@ -23,7 +23,7 @@ Vue.config.productionTip = false;
 Vue.use(Vuex);
 
 export const HTTP = axios.create({
-    baseURL: 'http://localhost/my_booker/server/api/'
+    baseURL: 'http://tc.geeksforless.net/~user3/booker/server/api/'
 })
 
 Vue.directive("theme", {

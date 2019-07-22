@@ -11,6 +11,7 @@ namespace application\core;
 
 class View
 {
+
     public $path;
     public $route;
 
@@ -25,7 +26,6 @@ class View
         extract($vars);
         $path = 'application/views/'.$this->path.'.php';
         if(file_exists($path)){
-            //copy view to buffer
             ob_start();
             require $path;
         }else{

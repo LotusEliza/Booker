@@ -10,12 +10,12 @@
     
     <!-- -----------------------Home links------------------------- -->
 <!--    /var/www/html/my_booker/server/api/public/styles/font-awesome/css/font-awesome.min.css-->
-    <link href="/my_booker/server/api/public/styles/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/my_booker/server/api/public/css/main.css" rel="stylesheet">
+    <!-- <link href="/my_booker/server/api/public/styles/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/my_booker/server/api/public/css/main.css" rel="stylesheet"> -->
  
  <!-- -----------------------Class links------------------------- -->
-<!--    <link href="/~user3/REST_API/server/api/public/styles/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
-<!--    <link href="/~user3/REST_API/server/api/public/css/main.css" rel="stylesheet">-->
+   <link href="/~user3/REST_API/server/api/public/styles/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+   <link href="/~user3/REST_API/server/api/public/css/main.css" rel="stylesheet">
     
 </head>
 <body>
@@ -220,13 +220,13 @@
 <script>window.jQuery || document.write('<script src="/server/api/public/scripts/jquery.min.js"><\/script>')</script>
 
 <!-- -----------------------Home links------------------------- -->
-<script src="/my_booker/server/api/public/scripts/bootstrap.min.js"></script>
+<!-- <script src="/my_booker/server/api/public/scripts/bootstrap.min.js"></script>
 <script src="/my_booker/server/api/public/scripts/jquery.smooth-scroll.min.js"></script>
-<script src="/my_booker/server/api/public/scripts/main.js"></script>
+<script src="/my_booker/server/api/public/scripts/main.js"></script> -->
 
 <!-- -----------------------Class links------------------------- -->
-<!--<script src="/~user3/REST_API/server/api/public/scripts/bootstrap.min.js"></script>-->
-<!--<script src="/~user3/REST_API/server/api/public/scripts/jquery.smooth-scroll.min.js"></script>-->
-<!--<script src="/~user3/REST_API/server/api/public/scripts/main.js"></script>-->
+<script src="/~user3/REST_API/server/api/public/scripts/bootstrap.min.js"></script>
+<script src="/~user3/REST_API/server/api/public/scripts/jquery.smooth-scroll.min.js"></script>
+<script src="/~user3/REST_API/server/api/public/scripts/main.js"></script>
 </body>
 </html>

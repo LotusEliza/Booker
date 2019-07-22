@@ -6,16 +6,16 @@
  * Time: 8:36 PM
  */
 
-   return[
-       'host' => 'localhost',
-       'name' => 'booker',
-       'user' => 'lotus',
-       'password' => '12122',
-   ];
+  //  return[
+  //      'host' => 'localhost',
+  //      'name' => 'booker',
+  //      'user' => 'lotus',
+  //      'password' => '12122',
+  //  ];
 
-//return[
-//  'host' => 'localhost',
-//  'name' => 'user3',
-//  'user' => 'user3',
-//  'password' => 'user3',
-//];
+return[
+ 'host' => 'localhost',
+ 'name' => 'user3',
+ 'user' => 'user3',
+ 'password' => 'user3',
+];

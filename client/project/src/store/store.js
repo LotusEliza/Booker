@@ -63,7 +63,6 @@ export default new Vuex.Store({
             return new Promise((resolve, reject) => {
                 commit('logout')
                 localStorage.removeItem('token')
-                // delete axios.defaults.headers.common['Authorization']
                 resolve()
             })
         },
@@ -73,6 +72,7 @@ export default new Vuex.Store({
 
         isLoggedIn: state => state.token,
         authStatus: state => state.status,
+
         USER: state => {
             return state.item;
         },

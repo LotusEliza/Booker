@@ -17,7 +17,7 @@
 
 export default {
   name: 'App',
-
+  base: '/booker/server/',
     components:{
       'employee': employee,
       'app-header': header,

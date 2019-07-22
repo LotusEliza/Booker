@@ -14,7 +14,8 @@ class Event extends Model
         return $result;
     }
 
-    public function existEvent($time_start, $time_end, $id_room){
+    public function existEvent($time_start, $time_end, $id_room)
+    {
         $result = $this->db->row("SELECT * FROM events WHERE (id_room = ".$id_room." AND
                     (('".$time_start."' <= time_start AND '".$time_start."' <= time_end AND
                         (('".$time_end."' >= time_start AND '".$time_end ."' >= time_end) OR ('".$time_end."' >=
@@ -29,7 +30,8 @@ class Event extends Model
         }
     }
 
-    public function existEventId($id_event, $id_user, $id_room){
+    public function existEventId($id_event, $id_user, $id_room)
+    {
         $result = $this->db->row("SELECT * FROM events WHERE id_room = ".$id_room." AND id_user = ".$id_user."
                     AND id = ".$id_event." ");
         if($result){
@@ -39,7 +41,8 @@ class Event extends Model
         }
     }
 
-    public function getOneEvent($id_event){
+    public function getOneEvent($id_event)
+    {
         $result = $this->db->row("SELECT * FROM events WHERE id = ".$id_event." ");
         if($result){
             return $result;
@@ -50,7 +53,6 @@ class Event extends Model
 
     public function createEvent($array)
     {
-
         $result = $this->db->query('INSERT INTO events (id_user, id_room, description, time_start, time_end)
         VALUES (:id_user, :id_room, :description, :time_start, :time_end)', $array);
         $count = $result->rowCount();
@@ -64,7 +66,6 @@ class Event extends Model
 
     public function createRecurEvent($array)
     {
-//        $lastId = $this->db->lastId();
         $result = $this->db->query('INSERT INTO events (id_user, id_room, description, time_start, time_end)
         VALUES (:id_user, :id_room, :description, :time_start, :time_end)', $array);
         $count = $result->rowCount();
@@ -77,7 +78,8 @@ class Event extends Model
         }
     }
 
-    public function updateParId($id){
+    public function updateParId($id)
+    {
         $result = $this->db->query('UPDATE events SET id_parent='.$id.' WHERE id = '.$id.' ');
         $count = $result->rowCount();
         if($count){
@@ -87,9 +89,8 @@ class Event extends Model
         }
     }
 
-
-
-    public function createRecurEvents($array){
+    public function createRecurEvents($array)
+    {
         $result = $this->db->query('INSERT INTO events (id_user, id_room, description, time_start, time_end, id_parent)
         VALUES (:id_user, :id_room, :description, :time_start, :time_end, :id_parent)', $array);
         $count = $result->rowCount();
@@ -151,14 +152,4 @@ class Event extends Model
         }
     }
 
-//    public function deleteRecurEvent($array)
-//    {
-//        $result = $this->db->query('DELETE FROM events WHERE id=:id_parent OR id_parent=:id_parent', $array);
-//        $count = $result->rowCount();
-//        if($count){
-//            return true;
-//        }else{
-//            return false;
-//        }
-//    }
 }
