@@ -1,0 +1,13 @@
+    
+AddDefaultCharset utf-8
+
+<Limit GET POST PUT DELETE OPTIONS>
+    Allow from all
+</Limit>
+
+RewriteEngine on
+#RewriteBase /~user3/booker/server/api/
+RewriteBase /my_booker/server/api/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php
